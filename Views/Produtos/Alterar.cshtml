@@ -1,0 +1,54 @@
+﻿@model CRUD_Banco_de_Dados_NoSQL.Models.Produtos
+<h2>Adicionar Produtos</h2>
+<h3 class="badge bg-secondary">Adicionar Produtos - Alterar</h3>
+
+@using (Html.BeginForm("Atualizar", "Produtos", FormMethod.Post, new { id = "formProdutosAlterar", name = "formProdutosAlterar" }))
+{
+    <div class="row mt-2">
+        @Html.LabelFor(m => m.id, new { @class = "col-sm-2 col-form-label text-right" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.id, new { @class = "form-control", @readonly = "true" })
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        @Html.LabelFor(m => m.nome, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.nome, new { @maxlength = "70", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        @Html.LabelFor(m => m.Categoria, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.Categoria, new { @maxlength = "70", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        @Html.LabelFor(m => m.Estoque, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.Estoque, new { @maxlength = "70", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        @Html.LabelFor(m => m.preco, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.preco, new { @maxlength = "70", @class = "form-control"})
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        @Html.LabelFor(m => m.Fornecedor, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.Fornecedor, new { @maxlength = "70", @class = "form-control"})
+        </div>
+    </div>
+
+    <br />
+
+    <div class="mt-2">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+}
